@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIt-fZ-Rmp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scan View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SceneTextRecognitioniOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scanview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ScanViewController" customModule="SceneTextRecognitioniOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="-204" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NIg-qy-nrm">
@@ -73,28 +73,68 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Vbm-Kl-xvU" kind="relationship" relationship="rootViewController" id="8Io-Iu-OPG"/>
+                        <segue destination="VJ3-K5-e9U" kind="relationship" relationship="rootViewController" id="pmU-JI-3aq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3l-2B-Uzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740" y="116"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="l19-OI-kDO">
+        <!--Main View Controller-->
+        <scene sceneID="RBc-vk-Sg3">
             <objects>
-                <viewController id="Vbm-Kl-xvU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sQq-s2-VEr">
+                <viewController id="VJ3-K5-e9U" customClass="MainViewController" customModule="Anyline_Swift_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hd5-j6-WRT"/>
+                        <viewControllerLayoutGuide type="bottom" id="0JL-Kc-CWb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mnc-gp-2We">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-Pt-vIy">
+                                <rect key="frame" x="37" y="164" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F0v-Pt-vIy" secondAttribute="height" multiplier="3:1" id="Bg3-HZ-r6i"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtV-GO-dgc">
+                                <rect key="frame" x="169.5" y="537" width="35" height="30"/>
+                                <state key="normal" title="Scan"/>
+                                <connections>
+                                    <action selector="startScan:" destination="VJ3-K5-e9U" eventType="touchUpInside" id="hHQ-Mf-Ck9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Scan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80N-lF-Jrr">
+                                <rect key="frame" x="37" y="284" width="300" height="100.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="hrq-rI-hW8"/>
+                        <constraints>
+                            <constraint firstItem="F0v-Pt-vIy" firstAttribute="width" secondItem="Mnc-gp-2We" secondAttribute="width" multiplier="0.8" id="1DW-y1-nfS"/>
+                            <constraint firstItem="80N-lF-Jrr" firstAttribute="leading" secondItem="F0v-Pt-vIy" secondAttribute="leading" id="AWY-qf-XMd"/>
+                            <constraint firstItem="F0v-Pt-vIy" firstAttribute="top" secondItem="Hd5-j6-WRT" secondAttribute="bottom" constant="100" id="GED-MH-auK"/>
+                            <constraint firstItem="80N-lF-Jrr" firstAttribute="top" secondItem="F0v-Pt-vIy" secondAttribute="bottom" constant="20" id="Gms-kL-gom"/>
+                            <constraint firstItem="jtV-GO-dgc" firstAttribute="centerX" secondItem="Mnc-gp-2We" secondAttribute="centerX" id="HyO-OM-OgS"/>
+                            <constraint firstItem="F0v-Pt-vIy" firstAttribute="centerX" secondItem="Mnc-gp-2We" secondAttribute="centerX" id="eul-np-TmK"/>
+                            <constraint firstItem="80N-lF-Jrr" firstAttribute="trailing" secondItem="F0v-Pt-vIy" secondAttribute="trailing" id="gTd-5e-t9G"/>
+                            <constraint firstItem="0JL-Kc-CWb" firstAttribute="top" secondItem="jtV-GO-dgc" secondAttribute="bottom" constant="100" id="iG7-PW-htF"/>
+                            <constraint firstItem="80N-lF-Jrr" firstAttribute="height" secondItem="F0v-Pt-vIy" secondAttribute="height" id="jNS-0H-SRM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YNI-9C-SS7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Kal-ae-hou"/>
+                    <navigationItem key="navigationItem" id="I8T-gu-vq0"/>
+                    <connections>
+                        <outlet property="resultImage" destination="F0v-Pt-vIy" id="802-40-uz9"/>
+                        <outlet property="resultLabel" destination="80N-lF-Jrr" id="cO1-uD-Byf"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GJp-Gv-E1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2uk-t5-3F6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="116"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>

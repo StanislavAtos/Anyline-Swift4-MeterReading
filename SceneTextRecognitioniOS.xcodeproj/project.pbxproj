@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202486511F3AE20500CD12E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202486501F3AE20500CD12E6 /* AppDelegate.swift */; };
-		202486531F3AE20500CD12E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202486521F3AE20500CD12E6 /* ViewController.swift */; };
+		202486531F3AE20500CD12E6 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202486521F3AE20500CD12E6 /* ScanViewController.swift */; };
 		202486561F3AE20500CD12E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202486541F3AE20500CD12E6 /* Main.storyboard */; };
 		202486581F3AE20500CD12E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 202486571F3AE20500CD12E6 /* Assets.xcassets */; };
 		2024865B1F3AE20500CD12E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 202486591F3AE20500CD12E6 /* LaunchScreen.storyboard */; };
@@ -16,13 +16,14 @@
 		204D7D111F3C327000209923 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BF931F3B259800854C42 /* CoreImage.framework */; };
 		20A7BF891F3AE91200854C42 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7BF881F3AE91200854C42 /* Preview.swift */; };
 		20A7BF911F3B257100854C42 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A7BF8C1F3B250A00854C42 /* TesseractOCR.framework */; };
+		2801FEA5205C966D00E22899 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801FEA4205C966D00E22899 /* MainViewController.swift */; };
 		64E9ADE81F2A2436007BAC6F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 64E9ADE71F2A2436007BAC6F /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2024864D1F3AE20500CD12E6 /* SceneTextRecognitioniOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SceneTextRecognitioniOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202486501F3AE20500CD12E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		202486521F3AE20500CD12E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		202486521F3AE20500CD12E6 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		202486551F3AE20500CD12E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		202486571F3AE20500CD12E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2024865A1F3AE20500CD12E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		20A7BF8D1F3B254F00854C42 /* SceneTextRecognitioniOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SceneTextRecognitioniOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		20A7BF921F3B259100854C42 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		20A7BF931F3B259800854C42 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		2801FEA4205C966D00E22899 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		64E9ADE71F2A2436007BAC6F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,13 +74,14 @@
 			children = (
 				64E9ADE71F2A2436007BAC6F /* tessdata */,
 				202486501F3AE20500CD12E6 /* AppDelegate.swift */,
-				202486521F3AE20500CD12E6 /* ViewController.swift */,
+				202486521F3AE20500CD12E6 /* ScanViewController.swift */,
 				202486541F3AE20500CD12E6 /* Main.storyboard */,
 				202486571F3AE20500CD12E6 /* Assets.xcassets */,
 				202486591F3AE20500CD12E6 /* LaunchScreen.storyboard */,
 				2024865C1F3AE20500CD12E6 /* Info.plist */,
 				20A7BF881F3AE91200854C42 /* Preview.swift */,
 				20A7BF8D1F3B254F00854C42 /* SceneTextRecognitioniOS-Bridging-Header.h */,
+				2801FEA4205C966D00E22899 /* MainViewController.swift */,
 			);
 			path = SceneTextRecognitioniOS;
 			sourceTree = "<group>";
@@ -166,9 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				202486531F3AE20500CD12E6 /* ViewController.swift in Sources */,
+				202486531F3AE20500CD12E6 /* ScanViewController.swift in Sources */,
 				20A7BF891F3AE91200854C42 /* Preview.swift in Sources */,
 				202486511F3AE20500CD12E6 /* AppDelegate.swift in Sources */,
+				2801FEA5205C966D00E22899 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
